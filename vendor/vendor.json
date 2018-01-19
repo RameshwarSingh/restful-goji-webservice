@@ -1,14 +1,37 @@
 {
-    "comment": "",
-    "ignore": "test",
-    "package": [
-        {
-            "checksumSHA1": "Qq7Gzany1n6gK6hpZQq9UXFhGGo=",
-            "comment": "v1.0rc1-110-g4cc2de6",
-            "path": "github.com/gin-gonic/gin",
-            "revision": "4cc2de6207f4128624cbdd16be30f64966c67c08"
-        },
-        ...
-    ],
-    "rootPath": "github.com/heroku/go-RESTWithGoji"
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "XyobBfF84p0ZxDq3d88EmED7NY4=",
+			"path": "github.com/gorilla/mux",
+			"revision": "69dae3b874ba34bcaa563d5e5b1680334bfd9b73",
+			"revisionTime": "2018-01-17T07:16:36Z"
+		},
+		{
+			"checksumSHA1": "WYP9VWvX4Dinj18xqJ3c7L1hAlE=",
+			"path": "goji.io",
+			"revision": "0d89ff54b2c18c9c4ba530e32496aef902d3c6cd",
+			"revisionTime": "2016-11-14T00:05:42Z"
+		},
+		{
+			"checksumSHA1": "ViyW/xD/zzwKiAxCGvzeAZR8Vbk=",
+			"path": "goji.io/internal",
+			"revision": "0d89ff54b2c18c9c4ba530e32496aef902d3c6cd",
+			"revisionTime": "2016-11-14T00:05:42Z"
+		},
+		{
+			"checksumSHA1": "OeBDaEnIQYKa+Eq6rf/i3EYBXoQ=",
+			"path": "goji.io/pat",
+			"revision": "0d89ff54b2c18c9c4ba530e32496aef902d3c6cd",
+			"revisionTime": "2016-11-14T00:05:42Z"
+		},
+		{
+			"checksumSHA1": "LzTxY5RmfWirWeutizDVQnE4mDw=",
+			"path": "goji.io/pattern",
+			"revision": "0d89ff54b2c18c9c4ba530e32496aef902d3c6cd",
+			"revisionTime": "2016-11-14T00:05:42Z"
+		}
+	],
+	"rootPath": "RESTWithGoji"
 }
