@@ -33,16 +33,10 @@ var bookStore = []book{
 	},
 }
 
-var req *http.Request
-
 func main() {
 	mux := gojiMux()
-	fmt.Println("Host is:- " + req.Host)
-	http.ListenAndServe(req.Host, mux)
-}
-
-func Handler(w http.ResponseWriter, r *http.Request) {
-	req = r
+	//fmt.Println("Host is:- " + req.Host)
+	http.ListenAndServe(":12132", mux)
 }
 
 func gojiMux() *goji.Mux {
