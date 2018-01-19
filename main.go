@@ -36,13 +36,14 @@ var bookStore = []book{
 func main() {
 	mux := gojiMux()
 	//fmt.Println("Host is:- " + req.Host)
-	http.ListenAndServe(":12132", mux)
+	http.ListenAndServe("", mux)
 }
 
 func gojiMux() *goji.Mux {
 	mux := goji.NewMux()
 	mux.HandleFunc(pat.Get("/books"), allBooks)
 	mux.HandleFunc(pat.Get("/books/:isbn"), bookByISBN)
+	mux.HandleFunc(pat.Get("/"), domainHandler)
 	mux.Use(logging)
 	return mux
 }
@@ -54,6 +55,10 @@ func gorillaMux() *mux.Router {
 	mux.Use(logging)
 	http.Handle("/", mux)
 	return mux
+}
+
+func domainHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, string("Welcome to Go Lang + REST Demo App..."))
 }
 
 func allBooks(w http.ResponseWriter, r *http.Request) {
