@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 
 	"goji.io"
 	"goji.io/pat"
@@ -35,12 +36,13 @@ var bookStore = []book{
 
 func main() {
 	mux := gojiMux()
-	//fmt.Println("Host is:- " + req.Host)
-	http.ListenAndServe("", mux)
+	fmt.Println("Host PORT is:- " + os.Getenv("PORT"))
+	http.ListenAndServe(":" + os.Getenv("PORT"), mux)
 }
 
 func gojiMux() *goji.Mux {
 	mux := goji.NewMux()
+
 	mux.HandleFunc(pat.Get("/books"), allBooks)
 	mux.HandleFunc(pat.Get("/books/:isbn"), bookByISBN)
 	mux.HandleFunc(pat.Get("/"), domainHandler)
